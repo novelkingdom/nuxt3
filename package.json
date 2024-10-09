@@ -31,7 +31,8 @@
     "test:types": "pnpm --filter './test/fixtures/**' test:types",
     "test:unit": "vitest run packages/",
     "typecheck": "tsc --noEmit",
-    "typecheck:docs": "DOCS_TYPECHECK=true pnpm nuxi prepare && nuxt-content-twoslash verify --content-dir docs --languages html"
+    "typecheck:docs": "DOCS_TYPECHECK=true pnpm nuxi prepare && nuxt-content-twoslash verify --content-dir docs --languages html",
+    "start": "node .output/server/index.mjs"
   },
   "resolutions": {
     "@nuxt/kit": "workspace:*",
@@ -112,7 +113,7 @@
   },
   "packageManager": "pnpm@9.12.1",
   "engines": {
-    "node": "^16.10.0 || >=18.0.0"
+    "node": "20.x"
   },
   "version": ""
 }
